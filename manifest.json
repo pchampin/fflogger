@@ -1,0 +1,38 @@
+{
+
+  "manifest_version": 2,
+  "name": "FF Logger",
+  "version": "1.5",
+  "homepage_url": "http://champin.net/2022/fflogger/",
+  
+  "description": "Logs every HTTP request happening in the browser. See http://champin.net/2022/fflogger for more info.",
+
+  "icons": {
+    "48": "icons/glider.png"
+  },
+
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+
+  "browser_action": {
+    "default_icon": "icons/glider.png"
+  },
+
+  "background": {
+    "scripts": ["fflogger.js"]
+  },
+
+  "permissions": [
+      "storage",
+      "*://*/*",
+      "webRequest"
+  ],
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "fflogger@champin.net"
+    }
+  }
+}
